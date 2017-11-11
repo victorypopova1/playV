@@ -66,6 +66,22 @@
 </section><!--/#main-slider-->
 
 <section id="hero-text" class="wow fadeIn">
+    <section id="services2">
+
+        <div class="container">
+            <div class="row">
+                @for(feature <- all.asScala){
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="@feature.imageUrl"></i>
+                        <h3>@feature.title</h3>
+                        <p>@Html(feature.description)</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </section>
     <div class="container">
         <div class="row">
             <div class="col-sm-9">
@@ -77,6 +93,9 @@
                 <ul class="nav navbar-nav">
                     <li class="scroll"> <a class="btn btn-primary btn-lg" href="#contact-us">Записаться</a></li>
                 </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+
             </div>
         </div>
     </div>
